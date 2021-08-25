@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/homepage', function () {
-    return view('homepage');
-});
 
 // Route::get('/login', function () {
 //     return view('login');
@@ -25,5 +22,11 @@ Route::get('/homepage', function () {
 
 Route::get('/', 'AuthController@getLogin');
 Route::post('/', 'AuthController@postLogin')->name('login');
+Route::get('/logout', 'AuthController@logout')->name('logout');
 
+Route::group(['middleware' => ['auth']], function () {
 
+    Route::get('/homepage', function () {
+        return view('homepage');
+    });
+});
