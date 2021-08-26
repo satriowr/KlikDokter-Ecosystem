@@ -15,6 +15,11 @@ class AuthController extends Controller
     public function postLogin(Request $request)
     {
         // dd('Login berhasil');'
+        if (!Auth::attempt($request->only('email', 'password')))
+        {
+            return redirect('/');
+        }
+
         if (Auth::attempt($request->only('email', 'password')))
         {
             return redirect('homepage');

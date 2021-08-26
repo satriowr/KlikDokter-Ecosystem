@@ -20,7 +20,7 @@
       {{ csrf_field() }}
       <h1 class="h3 mb-3 font-weight-normal">Hello World :D</h1>
       <br>
-      <button class="btn btn-lg btn-primary btn-block" style="background-color:red; border-color:red" type="submit">Log Out</button>
+      <button class="btn btn-lg btn-primary btn-block" style="background-color:red; border-color:red" type="submit">Sign Out</button>
       </p>
     </form>
   </body>
