@@ -12,15 +12,38 @@
 
     <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="style.css" rel="stylesheet">
+    <link href="" rel="stylesheet">
   </head>
 
-  <body class="text-center">
-    <form class="logout" action="{{ route('logout') }}">
-      {{ csrf_field() }}
-      <h1 class="h3 mb-3 font-weight-normal">Hello World :D</h1>
-      <br>
-      <button class="btn btn-lg btn-primary btn-block" style="background-color:red; border-color:red" type="submit">Sign Out</button>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <form class="logout" >
+      <h1 class="h3 mt-5 mb-3 font-weight-normal">Hello World :D
+      
+      </h1>
+     <a href="{{ route('logout') }}" class="mt-5 btn btn-primary" style="background-color:red; border-color:red">Sign Out</a>
       </p>
     </form>
   </body>
