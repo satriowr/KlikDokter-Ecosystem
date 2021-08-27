@@ -18,22 +18,21 @@
   <body class="text-center">
     <form class="form-signin" method="POST" action="{{ route('login') }}">
       {{ csrf_field() }}
-      <img class="mb-4" src="https://i.im.ge/2021/08/25/BUPzJ.png" alt="" width="300" height="50">
-      <br>
-      <br>
-      <br>
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <img  class="mb-5" src="https://i.im.ge/2021/08/25/BUPzJ.png" alt="" width="300" height="50">
+      <h1 class="h3 mt-4 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <br>
-      <button class="btn btn-lg btn-primary btn-block" style="background-color:#61A745; border-color:#61A745" type="submit">Sign in</button>
+      <button class="mt-5 btn btn-lg btn-primary btn-block" style="background-color:#61A745; border-color:#61A745" type="submit">
+      Sign in
+    </button>
 
       <p class="mt-5 mb-3 text-muted">
           Klik Dokter Database App 2021
       </p>
     </form>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>
