@@ -31,3 +31,16 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/hcp', function () {
+        return view('hcp');
+    });
+});
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/komunitas', function () {
+        return view('komunitas');
+    });
+});
