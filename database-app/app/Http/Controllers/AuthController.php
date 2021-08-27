@@ -31,4 +31,14 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    public function hcp(Request $request)
+    {
+        return redirect('/hcp');
+    }
+
+    public function komunitas(Request $request)
+    {
+        return redirect('/komunitas');
+    }
 }
