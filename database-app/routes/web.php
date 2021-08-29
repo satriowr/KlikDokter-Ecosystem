@@ -44,3 +44,10 @@ Route::group(['middleware' => ['auth']], function () {
         return view('komunitas');
     });
 });
+
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/broadcast', function () {
+        return view('broadcast');
+    });
+});
