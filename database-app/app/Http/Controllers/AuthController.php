@@ -41,4 +41,9 @@ class AuthController extends Controller
     {
         return redirect('/komunitas');
     }
+
+    public function broadcast(Request $request)
+    {
+        return redirect('/broadcast');
+    }
 }
