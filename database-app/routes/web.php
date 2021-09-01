@@ -49,6 +49,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/broadcast', function () {
         return view('broadcast');
     });
-    Route::post('/broadcast', 'AuthController@postBroadcast')->name('postbroadcast');
+    Route::post('/broadcast', 'AuthController@broadcastNomor')->name('broadcastnomor');
 });
 
+Route::group(['middleware' => ['auth']], function () {
+
+    Route::get('/broadcastdb', function () {
+        return view('broadcastDB');
+    });
+});
