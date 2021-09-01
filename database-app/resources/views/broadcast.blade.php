@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,45 +33,50 @@
         <a class="nav-link" href="/komunitas">Database Komunitas</a>
       </li>
 
-      <li class="nav-item active">
-        <a class="nav-link" href="/broadcast">Broadcast</a>
-      </li>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Broadcast
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/broadcast">Broadcast Nomor</a></li>
+            <li><a class="dropdown-item" href="/broadcastdb">Broadcast Database</a></li>
+          </ul>
+        </li>
+    <br>
     </ul>
       <a href="{{ route('logout') }}" class="btn btn-outline-danger" style="margin-left:auto;">Sign Out</a>
     </div>
   </nav>
 
 	<div class="send">
-		<h1>Testing Broadcast</h1>
+		<h1 class=mt-4 style='margin-left:14px; font-size: 28px;'>
+      Broadcast Nomor
+    </h1>
+
 		<form class="testing" method="POST">
 			{{ csrf_field() }}
-			<b>No Tujuan</b><br>
-			<input type="text" name="nomor" placeholder="62" required maxlength="14">
-			<!-- <textarea class="form-control" required="" rows="10" spellcheck="false" name="pesan" id="pesan" placeholder="Format:
-Country code + Mobile digit + Phone number
 
-Example:
+      <a style='margin-left:14px; color:red; font-size: 14px;'>
+      Tulis atau copy/paste nomor (one per row) :*</a>
+
+			<textarea class="form-control mt-5" required rows="8" name="nomor" placeholder="Format:
+Kode negara + Nomer Whatsapp
+
+Contoh:
 62812345678
 62812345678901
 62812345678
-62812345678901"></textarea> -->
-			<br>
+62812345678901" style="margin-left:14px; width: 700px;"></textarea>
 
-			<b>Pesan</b>
-			<br>
-			<input type="text" name="pesan" placeholder="Tuliskan Pesan" required maxlength="160" >
-			<br><br>
-			<input type="submit" value="Kirim">
+      <textarea class="form-control mt-3 mb-5" rows="2" name="pesan" placeholder="Tuliskan pesan disini" style="margin-left:14px; width: 700px;"></textarea>
+
+			<button type="submit" class="btn btn-primary" style='margin-left:14px; background-color: #FFB319; border: none; padding: 8px 32px;'>Kirim</button>
 		</form>
 	</div>
 
-  <a>
-    <h1 class="h3 mt-5 mb-3 font-weight-normal">
-      Hello World :D
-    </h1>
-  </a>
-
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
