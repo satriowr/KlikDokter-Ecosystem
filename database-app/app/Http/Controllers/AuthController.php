@@ -42,7 +42,7 @@ class AuthController extends Controller
         return redirect('/komunitas');
     }
 
-    public function postBroadcast(Request $request)
+    public function broadcastNomor(Request $request)
     { 
         $array = explode(PHP_EOL, $_POST['nomor']);
         $total = count($array);
@@ -50,7 +50,7 @@ class AuthController extends Controller
         for ($i=0; $i < $total ; $i++) {
             //dd($total);
             error_reporting(0);
-            $my_apikey = "AWP7MLKH3BPG06UQ6SOM";
+            $my_apikey = "TZI1QSN4E54EL6AGPGDX";
             $destination = $array[$i];
             $message = $_POST['pesan'];
             $api_url = "http://panel.rapiwha.com/send_message.php";
@@ -66,6 +66,11 @@ class AuthController extends Controller
 
         }
         return redirect('/broadcast');
+    }
+
+    public function broadcastDB(Request $request)
+    {
+        return redirect('/broadcastdb');
     }
 
 }
