@@ -59,8 +59,8 @@
       <a style='margin-left:14px; color:red; font-size: 14px;'>
       Tulis atau copy/paste nomor (one per row) :*</a>
 
-			<textarea class="form-control mt-5" required rows="8" name="nomor" placeholder="Format:
-Kode negara + Nomer Whatsapp
+			<textarea class="form-control mt-4" required rows="8" name="nomor" placeholder="Format:
+Kode negara + Nomor Whatsapp
 
 Contoh:
 62812345678
@@ -68,7 +68,7 @@ Contoh:
 62812345678
 62812345678901" style="margin-left:14px; width: 700px;"></textarea>
 
-      <textarea class="form-control mt-3 mb-5" rows="2" name="pesan" placeholder="Tuliskan pesan disini" style="margin-left:14px; width: 700px;"></textarea>
+      <textarea class="form-control mt-5 mb-3" rows="2" name="pesan" placeholder="Tuliskan pesan disini" style="margin-left:14px; width: 700px;"></textarea>
 
 			<button type="submit" class="btn btn-primary" style='margin-left:14px; background-color: #FFB319; border: none; padding: 8px 32px;'>Kirim</button>
 		</form>
