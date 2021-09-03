@@ -53,8 +53,6 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
-
-    Route::get('/broadcastdb', function () {
-        return view('broadcastDB');
-    });
+    Route::get('/broadcastdb', 'broadcastDBController@index');
+    Route::get('/exportdata', 'broadcastDBController@dataExport');
 });
